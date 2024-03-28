@@ -1,3 +1,4 @@
+import string
 from typing import List
 
 import pytest
@@ -83,12 +84,12 @@ def test_dicts():
     Используйте первый список как ключи, а второй - как значения.
     Подсказка: используйте встроенную функцию zip.
     """
-    first = ["a", "b", "c", "d", "e"]
-    second = [1, 2, 3, 4, 5]
+    first = [chr(i) for i in range(97, 123)]
+    second = [random.randint(1, 100) for _ in range(26)]
     # TODO создайте словарь
     d = dict(zip(first, second))
 
     assert isinstance(d, dict)
-    assert len(d) == 5
+    assert len(d) == 26
     assert list(d.keys()) == first
     assert list(d.values()) == second
