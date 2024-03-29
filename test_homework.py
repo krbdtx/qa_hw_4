@@ -1,8 +1,5 @@
-import string
 from typing import List
-
-import pytest
-import math
+from math import pi
 import random
 
 
@@ -14,7 +11,7 @@ def test_greeting():
     age = 25
     # TODO Сформируйте нужную строку
     output = (f"Привет, {name}! Тебе {age} лет.")
-
+    print(f"\n{output}")
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
 
@@ -44,15 +41,16 @@ def test_circle():
     """
     r = 23
     # TODO сосчитайте площадь
-    area = math.pi * r ** 2
+    area = pi * r ** 2
 
     assert area == 1661.9025137490005
 
     # TODO сосчитайте длину окружности
-    length = 2 * math.pi * r
+    length = 2 * pi * r
 
     assert length == 144.51326206513048
-
+    print(f"\n{area}")
+    print(f"\n{length}")
 
 def test_random_list():
     """
